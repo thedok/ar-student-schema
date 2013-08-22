@@ -16,7 +16,21 @@ describe Student, "#name and #age" do
       :gender => 'male',
       :birthday => Date.new(1970,9,1)
     )
+
   end
+
+
+    @student = Student.new
+    @student.assign_attributes(
+      :first_name => "Happy",
+      :last_name => "Gilmore",
+      :gender => 'male',
+      :birthday => Date.new(1970,9,1)
+    )
+
+    p "---------------------------------------"
+    p @student.birthday.year.class
+
 
   it "should have name and age methods" do
     [:name, :age].each { |mthd| @student.should respond_to mthd }
